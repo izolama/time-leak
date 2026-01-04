@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import '../controllers/motion_controller.dart';
 import '../controllers/permission_controller.dart';
 import '../controllers/time_controller.dart';
+import '../meaning/meaning_screen.dart';
 import '../services/motion_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -49,6 +50,11 @@ class HomeScreen extends StatelessWidget {
               Text(
                 'We calculate time spent moving.\nWe don’t track your location.',
                 style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              const SizedBox(height: 12),
+              TextButton(
+                onPressed: () => Get.to(() => const MeaningScreen()),
+                child: const Text('See what this time means'),
               ),
               const Spacer(),
               Obx(() {
