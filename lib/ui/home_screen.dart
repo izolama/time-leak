@@ -5,6 +5,7 @@ import '../controllers/motion_controller.dart';
 import '../controllers/permission_controller.dart';
 import '../controllers/time_controller.dart';
 import '../meaning/meaning_screen.dart';
+import '../features/worth_it/worth_it_screen.dart';
 import '../services/motion_service.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -55,6 +56,10 @@ class HomeScreen extends StatelessWidget {
               TextButton(
                 onPressed: () => Get.to(() => const MeaningScreen()),
                 child: const Text('See what this time means'),
+              ),
+              TextButton(
+                onPressed: () => Get.to(() => const WorthItCalculatorScreen()),
+                child: const Text('Worth It calculator'),
               ),
               const Spacer(),
               Obx(() {
