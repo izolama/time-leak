@@ -18,10 +18,10 @@ WorthItOutputs calculateWorthIt(WorthItInputs inputs) {
       (inputs.commuteMinutesPerDay / inputs.workHoursPerDay).round();
 
   final hourlyWorkRate =
-      workHoursPerMonth == 0 ? 0 : inputs.monthlyIncome / workHoursPerMonth;
+      workHoursPerMonth == 0 ? 0.0 : inputs.monthlyIncome / workHoursPerMonth;
   final effectiveHourlyRate =
       timeCommittedPerMonth == 0
-          ? 0
+          ? 0.0
           : inputs.monthlyIncome / timeCommittedPerMonth;
 
   return WorthItOutputs(
